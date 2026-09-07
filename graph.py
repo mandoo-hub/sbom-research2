@@ -95,6 +95,10 @@ def calculate_metrics(G, nodes):
 
         # 해당 노드가 의존하는 하위 Component 수
         dependency_count = G.out_degree(node)
+        
+        transitive_parents = nx.ancestors(G, node)
+        
+        transitive_parent_count = len(transitive_parents)
 
         info = nodes[node]
 
@@ -104,6 +108,7 @@ def calculate_metrics(G, nodes):
             "depth": info["depth"],
             "direct": info["direct"],
             "parent_count": parent_count,
+            "transitive_parent_count" : transitive_parent_count,
             "dependency_count": dependency_count,
             "degree_centrality": degree_centrality[node],
             "in_degree_centrality": in_degree_centrality[node],
@@ -131,6 +136,7 @@ def save_results(results):
             "depth",
             "direct",
             "parent_count",
+            "transitive_parent_count",
             "dependency_count",
             "degree_centrality",
             "in_degree_centrality",
@@ -190,6 +196,26 @@ def print_summary(G, results):
             f"{row['name']:<25} "
             f"parents={row['parent_count']}"
         )
+
+    print()
+    print("[+] Top 10 - Transitive Parent Count")
+    
+    transitive_rank = sorted(
+        results,
+        key=lambda x: x["transitive_parent_count"],
+        reverse=True
+    )
+    
+    for rank, row in enumerate(
+        transitive_rank[:10],
+        1
+    ):
+        print(
+            f"{rank:2}. "
+            f"{row['name']:<25} "
+            f"transitive_parents="
+            f"{row['transitive_parent_count']}"
+    )
 
     print()
     print("[+] Top 10 - Degree Centrality")
