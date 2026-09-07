@@ -100,6 +100,8 @@ def calculate_metrics(G, nodes):
         
         transitive_parent_count = len(transitive_parents)
 
+        weighted_impact = calculate_wighted_impact(G, node, decay=0.7)
+
         info = nodes[node]
 
         results.append({
@@ -109,12 +111,75 @@ def calculate_metrics(G, nodes):
             "direct": info["direct"],
             "parent_count": parent_count,
             "transitive_parent_count" : transitive_parent_count,
+            "weighted_impact": weighted_impact,
             "dependency_count": dependency_count,
             "degree_centrality": degree_centrality[node],
             "in_degree_centrality": in_degree_centrality[node],
             "out_degree_centrality": out_degree_centrality[node]
         })
 
+    return results
+    
+    
+# ==========================================================
+# 5. 감쇄 계수  계산
+# ==========================================================
+def caculate_weighted_impact(G, node, decay=0.7):
+    
+    ancestors = nx.ancestors(G, node)
+    
+    impact = 0.0
+    
+    for parent in ancestors:
+    
+      try:
+          distance = nx.shortest_path_length(
+              G,
+              source=parent,
+              target=node
+          )
+          
+          impact += decay ** (distance - 1)
+          
+      except nx.NetworkXNoPath:
+          continue
+      
+      return impact
+
+
+# ==========================================================
+# 6. PIS  계산
+# ==========================================================
+def calculate_pis(results):
+
+    impacts = [
+        row["weighted_impact"]
+        for row in results
+    ]
+    
+    min_impact = min(impacts)
+    max_impact = max(impacts)
+    
+    for row in results:
+        
+        if max_impact == min_impact:
+            pis = 0.0
+            
+        else:
+            pis = (
+                10
+                * (
+                    row["weighted_impact"]
+                    - min_impact
+                  )
+                  / (
+                      max_impact
+                      - min_impact
+                    )
+                  )
+                  
+            row["pis"] = pis
+            
     return results
 
 
@@ -137,6 +202,7 @@ def save_results(results):
             "direct",
             "parent_count",
             "transitive_parent_count",
+            "pis",
             "dependency_count",
             "degree_centrality",
             "in_degree_centrality",
@@ -181,7 +247,7 @@ def print_summary(G, results):
     print(f"[+] Edges : {G.number_of_edges()}")
 
     print()
-    print("[+] Top 10 - Parent Count")
+    print("[++] Top 10 - Parent Count")
 
     parent_rank = sorted(
         results,
@@ -216,6 +282,27 @@ def print_summary(G, results):
             f"transitive_parents="
             f"{row['transitive_parent_count']}"
     )
+
+    print()
+    print("[+] Top 10 - Patch Impact Score")
+    
+    pis_rank = sorted(
+        results,
+        key=lambda x: x["pis"],
+        reverse=True
+    )
+    
+    for rank, row in enumerate(
+        pis_rank[:10],
+        1
+    ):
+    
+        print(
+            f"{rank:2}. "
+            f"{row['name']:<25} "
+            f"PIS={row['pis']:.4f} "
+            f"impact={row['weighted_impact']:.4f}"
+        )
 
     print()
     print("[+] Top 10 - Degree Centrality")
@@ -259,6 +346,11 @@ if __name__ == "__main__":
         G,
         nodes
     )
+
+    results = calculate_pis(
+        results
+    )
+
 
     save_results(results)
 
