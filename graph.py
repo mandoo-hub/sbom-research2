@@ -100,7 +100,7 @@ def calculate_metrics(G, nodes):
         
         transitive_parent_count = len(transitive_parents)
 
-        weighted_impact = calculate_wighted_impact(G, node, decay=0.7)
+        weighted_impact = calculate_weighted_impact(G, node, decay=0.7)
 
         info = nodes[node]
 
@@ -124,7 +124,7 @@ def calculate_metrics(G, nodes):
 # ==========================================================
 # 5. 감쇄 계수  계산
 # ==========================================================
-def caculate_weighted_impact(G, node, decay=0.7):
+def calculate_weighted_impact(G, node, decay=0.7):
     
     ancestors = nx.ancestors(G, node)
     
@@ -144,7 +144,7 @@ def caculate_weighted_impact(G, node, decay=0.7):
       except nx.NetworkXNoPath:
           continue
       
-      return impact
+    return impact
 
 
 # ==========================================================
@@ -202,6 +202,7 @@ def save_results(results):
             "direct",
             "parent_count",
             "transitive_parent_count",
+            "weighted_impact",
             "pis",
             "dependency_count",
             "degree_centrality",
