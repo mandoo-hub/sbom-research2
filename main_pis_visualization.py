@@ -17,7 +17,7 @@ from torch_geometric.utils import to_undirected
 
 
 # ==========================================
-# 0. 재현성 설정
+# 0. 재현성 설정 
 # ==========================================
 SEED = 42
 random.seed(SEED)
