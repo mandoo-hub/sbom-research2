@@ -312,7 +312,7 @@ result/
 
 | GCN/t-SNE-based Overall Dependency Graph |
 | :---: |
-| ![Overall Dependency Graph](./result/dependency_graph_overall.png) |
+| ![Overall Dependency Graph](./sample_output/dependency_graph_overall.png) |
 
 전체 그래프는 GCN/GAE를 통해 학습한 Node Embedding을 t-SNE를 이용하여 2차원 공간으로 축소한 결과입니다.
 
@@ -320,7 +320,7 @@ result/
 
 | PIS Top-10 Highlighted Dependency Graph |
 | :---: |
-| ![PIS Top-10 Dependency Graph](./result/dependency_graph_pis_top10.png) |
+| ![PIS Top-10 Dependency Graph](./sample_output/dependency_graph_pis_top10.png) |
 
 두 번째 그래프는 **동일한 t-SNE 좌표와 전체 의존성 구조를 유지하면서 PIS가 높은 상위 10개 구성요소를 강조**합니다.
 
