@@ -1,0 +1,859 @@
+{
+  "root": "apache2",
+  "nodes": [
+    {
+      "id": "apache2",
+      "name": "apache2",
+      "version": "2.4.52-1ubuntu4.23",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/apache2@2.4.52-1ubuntu4.23#var/lib/dpkg",
+      "depth": 0,
+      "direct": 0
+    },
+    {
+      "id": "apache2-bin",
+      "name": "apache2-bin",
+      "version": "2.4.52-1ubuntu4.23",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/apache2-bin@2.4.52-1ubuntu4.23#var/lib/dpkg",
+      "depth": 1,
+      "direct": 1
+    },
+    {
+      "id": "apache2-data",
+      "name": "apache2-data",
+      "version": "2.4.52-1ubuntu4.23",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/apache2-data@2.4.52-1ubuntu4.23#var/lib/dpkg",
+      "depth": 1,
+      "direct": 1
+    },
+    {
+      "id": "apache2-utils",
+      "name": "apache2-utils",
+      "version": "2.4.52-1ubuntu4.23",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/apache2-utils@2.4.52-1ubuntu4.23#var/lib/dpkg",
+      "depth": 1,
+      "direct": 1
+    },
+    {
+      "id": "init-system-helpers",
+      "name": "init-system-helpers",
+      "version": "1.62",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/init-system-helpers@1.62#var/lib/dpkg",
+      "depth": 1,
+      "direct": 1
+    },
+    {
+      "id": "lsb-base",
+      "name": "lsb-base",
+      "version": "11.1.0ubuntu4",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/lsb-base@11.1.0ubuntu4#var/lib/dpkg",
+      "depth": 1,
+      "direct": 1
+    },
+    {
+      "id": "mime-support",
+      "name": "mime-support",
+      "version": "3.66",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/mime-support@3.66#var/lib/dpkg",
+      "depth": 1,
+      "direct": 1
+    },
+    {
+      "id": "procps",
+      "name": "procps",
+      "version": "2:3.3.17-6ubuntu2.1",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/procps@2:3.3.17-6ubuntu2.1#var/lib/dpkg",
+      "depth": 1,
+      "direct": 1
+    },
+    {
+      "id": "libapr1",
+      "name": "libapr1",
+      "version": "1.7.0-8ubuntu0.22.04.2",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libapr1@1.7.0-8ubuntu0.22.04.2#var/lib/dpkg",
+      "depth": 2,
+      "direct": 0
+    },
+    {
+      "id": "libaprutil1",
+      "name": "libaprutil1",
+      "version": "1.6.1-5ubuntu4.22.04.2",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libaprutil1@1.6.1-5ubuntu4.22.04.2#var/lib/dpkg",
+      "depth": 2,
+      "direct": 0
+    },
+    {
+      "id": "libaprutil1-dbd-sqlite3",
+      "name": "libaprutil1-dbd-sqlite3",
+      "version": "1.6.1-5ubuntu4.22.04.2",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libaprutil1-dbd-sqlite3@1.6.1-5ubuntu4.22.04.2#var/lib/dpkg",
+      "depth": 2,
+      "direct": 0
+    },
+    {
+      "id": "libaprutil1-ldap",
+      "name": "libaprutil1-ldap",
+      "version": "1.6.1-5ubuntu4.22.04.2",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libaprutil1-ldap@1.6.1-5ubuntu4.22.04.2#var/lib/dpkg",
+      "depth": 2,
+      "direct": 0
+    },
+    {
+      "id": "libbrotli1",
+      "name": "libbrotli1",
+      "version": "1.0.9-2build6",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libbrotli1@1.0.9-2build6#var/lib/dpkg",
+      "depth": 2,
+      "direct": 0
+    },
+    {
+      "id": "libc6",
+      "name": "libc6",
+      "version": "2.35-0ubuntu3.14",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libc6@2.35-0ubuntu3.14#var/lib/dpkg",
+      "depth": 2,
+      "direct": 0
+    },
+    {
+      "id": "libcrypt1",
+      "name": "libcrypt1",
+      "version": "1:4.4.27-1",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libcrypt1@1:4.4.27-1#var/lib/dpkg",
+      "depth": 2,
+      "direct": 0
+    },
+    {
+      "id": "libcurl4",
+      "name": "libcurl4",
+      "version": "7.81.0-1ubuntu1.25",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libcurl4@7.81.0-1ubuntu1.25#var/lib/dpkg",
+      "depth": 2,
+      "direct": 0
+    },
+    {
+      "id": "libjansson4",
+      "name": "libjansson4",
+      "version": "2.13.1-1.1build3",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libjansson4@2.13.1-1.1build3#var/lib/dpkg",
+      "depth": 2,
+      "direct": 0
+    },
+    {
+      "id": "libldap-2.5-0",
+      "name": "libldap-2.5-0",
+      "version": "2.5.18+dfsg-0ubuntu0.22.04.2",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libldap-2.5-0@2.5.18%2Bdfsg-0ubuntu0.22.04.2#var/lib/dpkg",
+      "depth": 2,
+      "direct": 0
+    },
+    {
+      "id": "liblua5.3-0",
+      "name": "liblua5.3-0",
+      "version": "5.3.6-1build1",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/liblua5.3-0@5.3.6-1build1#var/lib/dpkg",
+      "depth": 2,
+      "direct": 0
+    },
+    {
+      "id": "libncurses6",
+      "name": "libncurses6",
+      "version": "6.3-2ubuntu0.2",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libncurses6@6.3-2ubuntu0.2#var/lib/dpkg",
+      "depth": 2,
+      "direct": 0
+    },
+    {
+      "id": "libncursesw6",
+      "name": "libncursesw6",
+      "version": "6.3-2ubuntu0.2",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libncursesw6@6.3-2ubuntu0.2#var/lib/dpkg",
+      "depth": 2,
+      "direct": 0
+    },
+    {
+      "id": "libnghttp2-14",
+      "name": "libnghttp2-14",
+      "version": "1.43.0-1ubuntu0.4",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libnghttp2-14@1.43.0-1ubuntu0.4#var/lib/dpkg",
+      "depth": 2,
+      "direct": 0
+    },
+    {
+      "id": "libpcre3",
+      "name": "libpcre3",
+      "version": "2:8.39-13ubuntu0.22.04.1",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libpcre3@2:8.39-13ubuntu0.22.04.1#var/lib/dpkg",
+      "depth": 2,
+      "direct": 0
+    },
+    {
+      "id": "libprocps8",
+      "name": "libprocps8",
+      "version": "2:3.3.17-6ubuntu2.1",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libprocps8@2:3.3.17-6ubuntu2.1#var/lib/dpkg",
+      "depth": 2,
+      "direct": 0
+    },
+    {
+      "id": "libssl3",
+      "name": "libssl3",
+      "version": "3.0.2-0ubuntu1.26",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libssl3@3.0.2-0ubuntu1.26#var/lib/dpkg",
+      "depth": 2,
+      "direct": 0
+    },
+    {
+      "id": "libtinfo6",
+      "name": "libtinfo6",
+      "version": "6.3-2ubuntu0.2",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libtinfo6@6.3-2ubuntu0.2#var/lib/dpkg",
+      "depth": 2,
+      "direct": 0
+    },
+    {
+      "id": "libxml2",
+      "name": "libxml2",
+      "version": "2.9.13+dfsg-1ubuntu0.12",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libxml2@2.9.13%2Bdfsg-1ubuntu0.12#var/lib/dpkg",
+      "depth": 2,
+      "direct": 0
+    },
+    {
+      "id": "mailcap",
+      "name": "mailcap",
+      "version": "3.70+nmu1ubuntu1.22.04.1",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/mailcap@3.70%2Bnmu1ubuntu1.22.04.1#var/lib/dpkg",
+      "depth": 2,
+      "direct": 0
+    },
+    {
+      "id": "media-types",
+      "name": "media-types",
+      "version": "7.0.0",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/media-types@7.0.0#var/lib/dpkg",
+      "depth": 2,
+      "direct": 0
+    },
+    {
+      "id": "perl-base",
+      "name": "perl-base",
+      "version": "5.34.0-3ubuntu1.7",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/perl-base@5.34.0-3ubuntu1.7#var/lib/dpkg",
+      "depth": 2,
+      "direct": 0
+    },
+    {
+      "id": "zlib1g",
+      "name": "zlib1g",
+      "version": "1:1.2.11.dfsg-2ubuntu9.2",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/zlib1g@1:1.2.11.dfsg-2ubuntu9.2#var/lib/dpkg",
+      "depth": 2,
+      "direct": 0
+    },
+    {
+      "id": "debconf",
+      "name": "debconf",
+      "version": "1.5.79ubuntu1",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/debconf@1.5.79ubuntu1#var/lib/dpkg",
+      "depth": 3,
+      "direct": 0
+    },
+    {
+      "id": "dpkg",
+      "name": "dpkg",
+      "version": "1.21.1ubuntu2.6",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/dpkg@1.21.1ubuntu2.6#var/lib/dpkg",
+      "depth": 3,
+      "direct": 0
+    },
+    {
+      "id": "libdb5.3",
+      "name": "libdb5.3",
+      "version": "5.3.28+dfsg1-0.8ubuntu3",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libdb5.3@5.3.28%2Bdfsg1-0.8ubuntu3#var/lib/dpkg",
+      "depth": 3,
+      "direct": 0
+    },
+    {
+      "id": "libexpat1",
+      "name": "libexpat1",
+      "version": "2.4.7-1ubuntu0.7",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libexpat1@2.4.7-1ubuntu0.7#var/lib/dpkg",
+      "depth": 3,
+      "direct": 0
+    },
+    {
+      "id": "libgcc-s1",
+      "name": "libgcc-s1",
+      "version": "12.3.0-1ubuntu1~22.04.3",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libgcc-s1@12.3.0-1ubuntu1~22.04.3#var/lib/dpkg",
+      "depth": 3,
+      "direct": 0
+    },
+    {
+      "id": "libgdbm6",
+      "name": "libgdbm6",
+      "version": "1.23-1",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libgdbm6@1.23-1#var/lib/dpkg",
+      "depth": 3,
+      "direct": 0
+    },
+    {
+      "id": "libgnutls30",
+      "name": "libgnutls30",
+      "version": "3.7.3-4ubuntu1.9",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libgnutls30@3.7.3-4ubuntu1.9#var/lib/dpkg",
+      "depth": 3,
+      "direct": 0
+    },
+    {
+      "id": "libgssapi-krb5-2",
+      "name": "libgssapi-krb5-2",
+      "version": "1.19.2-2ubuntu0.8",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libgssapi-krb5-2@1.19.2-2ubuntu0.8#var/lib/dpkg",
+      "depth": 3,
+      "direct": 0
+    },
+    {
+      "id": "libicu70",
+      "name": "libicu70",
+      "version": "70.1-2",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libicu70@70.1-2#var/lib/dpkg",
+      "depth": 3,
+      "direct": 0
+    },
+    {
+      "id": "libidn2-0",
+      "name": "libidn2-0",
+      "version": "2.3.2-2build1",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libidn2-0@2.3.2-2build1#var/lib/dpkg",
+      "depth": 3,
+      "direct": 0
+    },
+    {
+      "id": "liblzma5",
+      "name": "liblzma5",
+      "version": "5.2.5-2ubuntu1.1",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/liblzma5@5.2.5-2ubuntu1.1#var/lib/dpkg",
+      "depth": 3,
+      "direct": 0
+    },
+    {
+      "id": "libpsl5",
+      "name": "libpsl5",
+      "version": "0.21.0-1.2build2",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libpsl5@0.21.0-1.2build2#var/lib/dpkg",
+      "depth": 3,
+      "direct": 0
+    },
+    {
+      "id": "librtmp1",
+      "name": "librtmp1",
+      "version": "2.4+20151223.gitfa8646d.1-2build4",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/librtmp1@2.4%2B20151223.gitfa8646d.1-2build4#var/lib/dpkg",
+      "depth": 3,
+      "direct": 0
+    },
+    {
+      "id": "libsasl2-2",
+      "name": "libsasl2-2",
+      "version": "2.1.27+dfsg2-3ubuntu1.2",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libsasl2-2@2.1.27%2Bdfsg2-3ubuntu1.2#var/lib/dpkg",
+      "depth": 3,
+      "direct": 0
+    },
+    {
+      "id": "libsqlite3-0",
+      "name": "libsqlite3-0",
+      "version": "3.37.2-2ubuntu0.7",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libsqlite3-0@3.37.2-2ubuntu0.7#var/lib/dpkg",
+      "depth": 3,
+      "direct": 0
+    },
+    {
+      "id": "libssh-4",
+      "name": "libssh-4",
+      "version": "0.9.6-2ubuntu0.22.04.7",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libssh-4@0.9.6-2ubuntu0.22.04.7#var/lib/dpkg",
+      "depth": 3,
+      "direct": 0
+    },
+    {
+      "id": "libstdc++6",
+      "name": "libstdc++6",
+      "version": "12.3.0-1ubuntu1~22.04.3",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libstdc%2B%2B6@12.3.0-1ubuntu1~22.04.3#var/lib/dpkg",
+      "depth": 3,
+      "direct": 0
+    },
+    {
+      "id": "libsystemd0",
+      "name": "libsystemd0",
+      "version": "249.11-0ubuntu3.21",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libsystemd0@249.11-0ubuntu3.21#var/lib/dpkg",
+      "depth": 3,
+      "direct": 0
+    },
+    {
+      "id": "libuuid1",
+      "name": "libuuid1",
+      "version": "2.37.2-4ubuntu3.5",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libuuid1@2.37.2-4ubuntu3.5#var/lib/dpkg",
+      "depth": 3,
+      "direct": 0
+    },
+    {
+      "id": "libzstd1",
+      "name": "libzstd1",
+      "version": "1.4.8+dfsg-3build1",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/libzstd1@1.4.8%2Bdfsg-3build1#var/lib/dpkg",
+      "depth": 3,
+      "direct": 0
+    },
+    {
+      "id": "perl",
+      "name": "perl",
+      "version": "5.34.0-3ubuntu1.7",
+      "type": "library",
+      "purl": "pkg:deb/ubuntu/perl@5.34.0-3ubuntu1.7#var/lib/dpkg",
+      "depth": 3,
+      "direct": 0
+    }
+  ],
+  "edges": [
+    {
+      "source": "apache2",
+      "target": "apache2-bin"
+    },
+    {
+      "source": "apache2",
+      "target": "apache2-data"
+    },
+    {
+      "source": "apache2",
+      "target": "apache2-utils"
+    },
+    {
+      "source": "apache2",
+      "target": "init-system-helpers"
+    },
+    {
+      "source": "apache2",
+      "target": "lsb-base"
+    },
+    {
+      "source": "apache2",
+      "target": "mime-support"
+    },
+    {
+      "source": "apache2",
+      "target": "procps"
+    },
+    {
+      "source": "apache2-bin",
+      "target": "libapr1"
+    },
+    {
+      "source": "apache2-bin",
+      "target": "libaprutil1"
+    },
+    {
+      "source": "apache2-bin",
+      "target": "libaprutil1-dbd-sqlite3"
+    },
+    {
+      "source": "apache2-bin",
+      "target": "libaprutil1-ldap"
+    },
+    {
+      "source": "apache2-bin",
+      "target": "libbrotli1"
+    },
+    {
+      "source": "apache2-bin",
+      "target": "libc6"
+    },
+    {
+      "source": "apache2-bin",
+      "target": "libcrypt1"
+    },
+    {
+      "source": "apache2-bin",
+      "target": "libcurl4"
+    },
+    {
+      "source": "apache2-bin",
+      "target": "libjansson4"
+    },
+    {
+      "source": "apache2-bin",
+      "target": "libldap-2.5-0"
+    },
+    {
+      "source": "apache2-bin",
+      "target": "liblua5.3-0"
+    },
+    {
+      "source": "apache2-bin",
+      "target": "libnghttp2-14"
+    },
+    {
+      "source": "apache2-bin",
+      "target": "libpcre3"
+    },
+    {
+      "source": "apache2-bin",
+      "target": "libssl3"
+    },
+    {
+      "source": "apache2-bin",
+      "target": "libxml2"
+    },
+    {
+      "source": "apache2-bin",
+      "target": "zlib1g"
+    },
+    {
+      "source": "apache2-utils",
+      "target": "libapr1"
+    },
+    {
+      "source": "apache2-utils",
+      "target": "libaprutil1"
+    },
+    {
+      "source": "apache2-utils",
+      "target": "libc6"
+    },
+    {
+      "source": "apache2-utils",
+      "target": "libcrypt1"
+    },
+    {
+      "source": "apache2-utils",
+      "target": "libssl3"
+    },
+    {
+      "source": "init-system-helpers",
+      "target": "perl-base"
+    },
+    {
+      "source": "libapr1",
+      "target": "libc6"
+    },
+    {
+      "source": "libapr1",
+      "target": "libuuid1"
+    },
+    {
+      "source": "libaprutil1",
+      "target": "libapr1"
+    },
+    {
+      "source": "libaprutil1",
+      "target": "libc6"
+    },
+    {
+      "source": "libaprutil1",
+      "target": "libcrypt1"
+    },
+    {
+      "source": "libaprutil1",
+      "target": "libdb5.3"
+    },
+    {
+      "source": "libaprutil1",
+      "target": "libexpat1"
+    },
+    {
+      "source": "libaprutil1",
+      "target": "libgdbm6"
+    },
+    {
+      "source": "libaprutil1",
+      "target": "libssl3"
+    },
+    {
+      "source": "libaprutil1-dbd-sqlite3",
+      "target": "libaprutil1"
+    },
+    {
+      "source": "libaprutil1-dbd-sqlite3",
+      "target": "libc6"
+    },
+    {
+      "source": "libaprutil1-dbd-sqlite3",
+      "target": "libsqlite3-0"
+    },
+    {
+      "source": "libaprutil1-ldap",
+      "target": "libaprutil1"
+    },
+    {
+      "source": "libaprutil1-ldap",
+      "target": "libc6"
+    },
+    {
+      "source": "libaprutil1-ldap",
+      "target": "libldap-2.5-0"
+    },
+    {
+      "source": "libbrotli1",
+      "target": "libc6"
+    },
+    {
+      "source": "libc6",
+      "target": "libcrypt1"
+    },
+    {
+      "source": "libc6",
+      "target": "libgcc-s1"
+    },
+    {
+      "source": "libcrypt1",
+      "target": "libc6"
+    },
+    {
+      "source": "libcurl4",
+      "target": "libbrotli1"
+    },
+    {
+      "source": "libcurl4",
+      "target": "libc6"
+    },
+    {
+      "source": "libcurl4",
+      "target": "libgssapi-krb5-2"
+    },
+    {
+      "source": "libcurl4",
+      "target": "libidn2-0"
+    },
+    {
+      "source": "libcurl4",
+      "target": "libldap-2.5-0"
+    },
+    {
+      "source": "libcurl4",
+      "target": "libnghttp2-14"
+    },
+    {
+      "source": "libcurl4",
+      "target": "libpsl5"
+    },
+    {
+      "source": "libcurl4",
+      "target": "librtmp1"
+    },
+    {
+      "source": "libcurl4",
+      "target": "libssh-4"
+    },
+    {
+      "source": "libcurl4",
+      "target": "libssl3"
+    },
+    {
+      "source": "libcurl4",
+      "target": "libzstd1"
+    },
+    {
+      "source": "libcurl4",
+      "target": "zlib1g"
+    },
+    {
+      "source": "libjansson4",
+      "target": "libc6"
+    },
+    {
+      "source": "libldap-2.5-0",
+      "target": "libc6"
+    },
+    {
+      "source": "libldap-2.5-0",
+      "target": "libgnutls30"
+    },
+    {
+      "source": "libldap-2.5-0",
+      "target": "libsasl2-2"
+    },
+    {
+      "source": "liblua5.3-0",
+      "target": "libc6"
+    },
+    {
+      "source": "liblua5.3-0",
+      "target": "libstdc++6"
+    },
+    {
+      "source": "libncurses6",
+      "target": "libc6"
+    },
+    {
+      "source": "libncurses6",
+      "target": "libtinfo6"
+    },
+    {
+      "source": "libncursesw6",
+      "target": "libc6"
+    },
+    {
+      "source": "libncursesw6",
+      "target": "libtinfo6"
+    },
+    {
+      "source": "libnghttp2-14",
+      "target": "libc6"
+    },
+    {
+      "source": "libpcre3",
+      "target": "libc6"
+    },
+    {
+      "source": "libprocps8",
+      "target": "libc6"
+    },
+    {
+      "source": "libprocps8",
+      "target": "libsystemd0"
+    },
+    {
+      "source": "libssl3",
+      "target": "debconf"
+    },
+    {
+      "source": "libssl3",
+      "target": "libc6"
+    },
+    {
+      "source": "libtinfo6",
+      "target": "libc6"
+    },
+    {
+      "source": "libxml2",
+      "target": "libc6"
+    },
+    {
+      "source": "libxml2",
+      "target": "libicu70"
+    },
+    {
+      "source": "libxml2",
+      "target": "liblzma5"
+    },
+    {
+      "source": "libxml2",
+      "target": "zlib1g"
+    },
+    {
+      "source": "mailcap",
+      "target": "media-types"
+    },
+    {
+      "source": "mailcap",
+      "target": "perl"
+    },
+    {
+      "source": "mime-support",
+      "target": "mailcap"
+    },
+    {
+      "source": "mime-support",
+      "target": "media-types"
+    },
+    {
+      "source": "perl-base",
+      "target": "dpkg"
+    },
+    {
+      "source": "perl-base",
+      "target": "libc6"
+    },
+    {
+      "source": "perl-base",
+      "target": "libcrypt1"
+    },
+    {
+      "source": "procps",
+      "target": "init-system-helpers"
+    },
+    {
+      "source": "procps",
+      "target": "libc6"
+    },
+    {
+      "source": "procps",
+      "target": "libncurses6"
+    },
+    {
+      "source": "procps",
+      "target": "libncursesw6"
+    },
+    {
+      "source": "procps",
+      "target": "libprocps8"
+    },
+    {
+      "source": "procps",
+      "target": "libtinfo6"
+    },
+    {
+      "source": "procps",
+      "target": "lsb-base"
+    },
+    {
+      "source": "zlib1g",
+      "target": "libc6"
+    }
+  ]
+}
