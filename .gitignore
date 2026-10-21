@@ -5,4 +5,5 @@ npm-debug.log*
 *.log
 __pycache__/
 *.pyc
-test/
+test*/
+ubuntu-obom.json
